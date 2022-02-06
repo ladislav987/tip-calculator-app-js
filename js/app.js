@@ -64,4 +64,5 @@ function resetHandler() {
     peopleElement.value = 1;
     amountInput.value = 0;
     customPercent.value = " ";
+
 }
