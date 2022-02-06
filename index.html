@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Tip calculator app</title>
+
+</head>
+
+<body>
+
+  <header>
+    <h2>Spli</h2>
+    <h2>tter</h2>
+  </header>
+
+  <main>
+    <form id="form">
+      <div class="container_app">
+        <div class="container_app_left">
+          <p>Bill</p>
+          <input class="input input_dollar" type="number" id="amount" name="amount" placeholder="0">
+
+          <p>Select Tip %</p>
+          <div id="button_container">
+            <button class="fivePercent"" id=" 5%" value="20">5%</button>
+            <button class="tenPercent" id="10%" value="10">10%</button>
+            <button class="fifteenPercent" id="15%" value="6.666666">15%</button>
+            <button class="twentyFivePercent" id="25%" value="4">25%</button>
+            <button class="fiftyPercent" id="50%" value="2">50%</button>
+            <input class="input input_percent" type="number" id="customPercent" name="percent" placeholder="custom">
+          </div>
+
+          <p>Number of People</p>
+          <input class="input input_people" type="number" id="people" name="people" value="1">
+        </div>
+
+
+        <div class="container_app_right">
+          <div class="grid">
+            <p>Tip Amount
+              <br>/ person
+            </p>
+            <p id="tipAmountOutput" class="output"></p>
+          </div>
+          <div class="grid">
+            <p>Total <br>/ person</p>
+            <p id="totalAmountOutput" class="output"></p>
+          </div>
+          <button onclick="resetHandler()" class="resetBtn">Reset</button>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>
