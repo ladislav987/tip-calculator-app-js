@@ -1,0 +1,12 @@
+@media (max-width: 1150px) {
+        #button_container {
+            grid-template-columns: 1fr 1fr !important;
+        }
+    }
+    @media (max-width: 760px) {
+        .container_app {
+            display: flex !important;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }

@@ -1,0 +1,44 @@
+button {
+    background-color: #00494d;
+    border: 0;
+    border-radius: 4px;
+
+    color: white;
+
+    padding: 10px 15px;
+    font-size: 1.2rem;
+}
+
+#button_container {
+    display: grid;
+    // grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: repeat(3, auto);
+
+    // max-width: 75%;
+
+    gap: 1rem;
+
+    margin: 0;
+
+    justify-content: center;
+
+    .input_percent {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.resetBtn {
+    background-color: #26c0ab;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    margin: 90px auto 30px auto;
+    cursor: pointer;
+    width: 100%;
+}
+
+.selectedButton {
+    background-color: #26c2ad;
+}

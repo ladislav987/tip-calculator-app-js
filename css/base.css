@@ -1,0 +1,159 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input {
+  background-color: #f3f8fb;
+  border: 0;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.input_dollar {
+  background: url("../images/icon-dollar.svg") 0 0 no-repeat;
+  background-color: #f3f8fb;
+  background-size: 15px;
+  background-position-y: center;
+  background-position-x: 7px;
+}
+
+.input_dollar:focus-visible,
+.input_percent:focus-visible,
+.input_people:focus-visible {
+  outline-color: #5baba2;
+}
+
+.input_people {
+  background: url("../images/icon-person.svg") 0 0 no-repeat;
+  background-color: #f3f8fb;
+  background-size: 15px;
+  background-position-y: center;
+  background-position-x: 7px;
+}
+
+.input_people,
+.input_dollar {
+  width: 95%;
+}
+
+body .container_app {
+  background-color: #fff;
+  max-width: 65%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+body .container_app .container_app_left {
+  grid-column: 1;
+  margin-right: 15px;
+}
+
+body .container_app .container_app_left p {
+  color: #626e6e;
+  font-size: 1.2rem;
+}
+
+body .container_app .container_app_right {
+  background-color: #00474b;
+  grid-column: 2;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+body .container_app .container_app_right p {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+body .container_app .container_app_right .grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body .container_app .container_app_right .output {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #26c0ab;
+}
+
+@media (max-width: 1150px) {
+  #button_container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .container_app {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #c5e4e7;
+}
+
+header {
+  text-align: center;
+  margin: 80px 0 20px 0;
+  color: #626e6e;
+  text-transform: uppercase;
+  display: grid;
+}
+
+header h2:first-child {
+  letter-spacing: 0.65rem;
+}
+
+header h2 {
+  margin: 2px;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+button {
+  background-color: #00494d;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
+
+#button_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  justify-content: center;
+}
+
+#button_container .input_percent {
+  width: 100%;
+  text-align: center;
+}
+
+.resetBtn {
+  background-color: #26c0ab;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem;
+  margin: 90px auto 30px auto;
+  cursor: pointer;
+  width: 100%;
+}
+
+.selectedButton {
+  background-color: #26c2ad;
+}
+/*# sourceMappingURL=base.css.map */

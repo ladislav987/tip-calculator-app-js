@@ -1,0 +1,29 @@
+body {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    background-color: #c5e4e7;
+}
+
+header {
+        text-align: center;
+
+        margin: 80px 0 20px 0;
+
+        color: #626e6e;
+
+        text-transform: uppercase;
+
+        display: grid;
+
+        h2:first-child {
+            letter-spacing: 0.65rem;
+        }
+
+        h2 {
+            margin: 2px;
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+        }
+    }
