@@ -1,43 +1,40 @@
 const amountInput = document.getElementById("amount");
-
 const button_container = document.getElementById("button_container");
-
 const customPercent = document.getElementById("customPercent");
-
 const peopleElement = document.getElementById("people");
 
 
-amountInput.addEventListener('click', () => {
-
-    percentage(amountInput.value);
+document.getElementById("form").addEventListener("click", event => {
+    event.preventDefault();
 });
 
-function percentage(amount) {
 
-    button_container.addEventListener('click', event => {
-        let percent = event.target.value;
-        let people = peopleElement.value;
-        spocitaj(percent, amount, people);
 
-        addClass();
-    });
+button_container.addEventListener('click', event => {
 
-    customPercent.addEventListener('input', event => {
-        let percent = 100 / customPercent.value;
-        let people = peopleElement.value;
+    if (amountInput.value == "" || amountInput.value < 0) {
+        alert("Please fill value in bill !")
+    }
 
-        spocitaj(percent, amount, people);
-    });
+    let percent = event.target.value;
+    let percentId = event.target.id;
+    let people = peopleElement.value;
+    let billAmount = amountInput.value;
 
-}
+    spocitaj(percent, billAmount, people);
+
+    addClass(percentId);
+});
+
+customPercent.addEventListener('input', event => {
+    let percent = 100 / customPercent.value;
+    let people = peopleElement.value;
+    let billAmount = amountInput.value;
+
+    spocitaj(percent, billAmount, people);
+});
 
 function spocitaj(percent, amount, people) {
-    document.getElementById("form").addEventListener("click", event => {
-        event.preventDefault();
-    });
-
-    let percentage = percent || 0;
-    let amounts = amount || 0;
 
     function format(numbers) {
         let number = new Intl.NumberFormat('en-US', {
@@ -48,10 +45,9 @@ function spocitaj(percent, amount, people) {
         return number;
     }
 
+    document.getElementById("tipAmountOutput").innerHTML = format((amount / percent) / people);
 
-    document.getElementById("tipAmountOutput").innerHTML = format((amounts / percentage) / people);
-
-    document.getElementById("totalAmountOutput").innerHTML = format(amounts / people);
+    document.getElementById("totalAmountOutput").innerHTML = format(amount / people);
 }
 
 function resetHandler() {
@@ -59,25 +55,17 @@ function resetHandler() {
     document.getElementById("totalAmountOutput").innerHTML = " ";
     peopleElement.value = 1;
     amountInput.value = 0;
-    customPercent.value = " ";
+    customPercent.value = "";
 
 }
 
-function addClass() {
+function addClass(id) {
     let elementDelete = document.querySelectorAll(".selectedButton");
 
-    console.log(elementDelete[0]);
-
     if (elementDelete[0] != undefined) {
-        console.log(elementDelete[0].id);
-
-        let elementDeletes = document.getElementById(elementDelete[0].id);
-
-        elementDeletes.classList.remove("selectedButton");
+        document.getElementById(elementDelete[0].id).classList.remove("selectedButton");;
     }
 
-
-    let newId = event.target.id;
-    let elementAdd = document.getElementById(newId);
+    let elementAdd = document.getElementById(id);
     elementAdd.classList.add("selectedButton");
 }
