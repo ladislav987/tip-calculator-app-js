@@ -8,7 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/base.css">
 
   <title>Tip calculator app</title>
 
@@ -26,20 +26,20 @@
       <div class="container_app">
         <div class="container_app_left">
           <p>Bill</p>
-          <input class="input input_dollar" type="number" id="amount" name="amount" placeholder="0">
+          <input autocomplete="off" class="input input_dollar" type="number" id="amount" name="amount" placeholder="0" required>
 
           <p>Select Tip %</p>
           <div id="button_container">
-            <button class="fivePercent"" id=" 5%" value="20">5%</button>
-            <button class="tenPercent" id="10%" value="10">10%</button>
-            <button class="fifteenPercent" id="15%" value="6.666666">15%</button>
-            <button class="twentyFivePercent" id="25%" value="4">25%</button>
-            <button class="fiftyPercent" id="50%" value="2">50%</button>
+            <button class="fivePercent"" id=" fivePercentId" value="20">5%</button>
+            <button class="tenPercent" id="tenPercentId" value="10">10%</button>
+            <button class="fifteenPercent" id="fifteenPercentId" value="6.666666">15%</button>
+            <button class="twentyFivePercent" id="twentyFivePercentId" value="4">25%</button>
+            <button class="fiftyPercent" id="fiftyPercentId" value="2">50%</button>
             <input class="input input_percent" type="number" id="customPercent" name="percent" placeholder="custom">
           </div>
 
           <p>Number of People</p>
-          <input class="input input_people" type="number" id="people" name="people" value="1">
+          <input autocomplete="off" class="input input_people" type="number" id="people" name="people" value="1">
         </div>
 
 
