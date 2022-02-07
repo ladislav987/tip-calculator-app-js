@@ -1,5 +1,9 @@
-body {
+p{
+    color: #626e6e;
+    font-size: 1.2rem;
+}
 
+body {
     .container_app {
         background-color: #fff;
 
@@ -17,13 +21,6 @@ body {
             grid-column: 1;
 
             margin-right: 15px;
-
-            p {
-                color: #626e6e;
-                 font-size: 1.2rem;
-            }
-
-
         }
 
         .container_app_right {
@@ -51,12 +48,6 @@ body {
                 font-weight: 700;
                 color: #26c0ab;
             }
-
-
         }
     }
-
-
-
-
 }

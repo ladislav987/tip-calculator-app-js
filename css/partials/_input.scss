@@ -4,6 +4,11 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+label {
+    color: #626e6e;
+    font-size: 1.2rem;
+}
+
 .input {
     background-color: #f3f8fb;
     border: 0;
@@ -17,6 +22,8 @@ input::-webkit-inner-spin-button {
     background-size: 15px;
     background-position-y: center;
     background-position-x: 7px;
+
+    margin: 7px 0 10px 0;
 }
 .input_dollar:focus-visible,
 .input_percent:focus-visible,
@@ -29,6 +36,8 @@ input::-webkit-inner-spin-button {
     background-size: 15px;
     background-position-y: center;
     background-position-x: 7px;
+
+    margin: 7px 0 10px 0;
 }
 
 .input_people,
