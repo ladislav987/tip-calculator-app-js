@@ -12,17 +12,13 @@ document.getElementById("form").addEventListener("click", event => {
 
 button_container.addEventListener('click', event => {
 
-    if (amountInput.value == "" || amountInput.value < 0) {
-        alert("Please fill value in bill !")
-    }
-
     let percent = event.target.value;
     let percentId = event.target.id;
     let people = peopleElement.value;
     let billAmount = amountInput.value;
 
-    spocitaj(percent, billAmount, people);
-
+    checkInput();
+    count(percent, billAmount, people);
     addClass(percentId);
 });
 
@@ -31,23 +27,13 @@ customPercent.addEventListener('input', event => {
     let people = peopleElement.value;
     let billAmount = amountInput.value;
 
-    spocitaj(percent, billAmount, people);
+    count(percent, billAmount, people);
 });
 
-function spocitaj(percent, amount, people) {
+function count(percent, amount, people) {
+    document.getElementById("tipAmountOutput").innerHTML = formatUSD((amount / percent) / people);
 
-    function format(numbers) {
-        let number = new Intl.NumberFormat('en-US', {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: 2
-        }).format(numbers)
-        return number;
-    }
-
-    document.getElementById("tipAmountOutput").innerHTML = format((amount / percent) / people);
-
-    document.getElementById("totalAmountOutput").innerHTML = format(amount / people);
+    document.getElementById("totalAmountOutput").innerHTML = formatUSD(amount / people);
 }
 
 function resetHandler() {
@@ -68,4 +54,20 @@ function addClass(id) {
 
     let elementAdd = document.getElementById(id);
     elementAdd.classList.add("selectedButton");
+}
+
+function checkInput() {
+    if (amountInput.value == "" || amountInput.value < 0) {
+        alert("Please fill value in bill !")
+    }
+}
+
+
+function formatUSD(numbers) {
+    let number = new Intl.NumberFormat('en-US', {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: 2
+    }).format(numbers)
+    return number;
 }
