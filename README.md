@@ -2,9 +2,9 @@
 
 ![Design preview](./images/tip-calculator-app-preview.jpg)
 
-Live verzia [Tip calculator app](https://lctipscalculator.netlify.app/)
+### Live verzia [Tip calculator app](https://lctipscalculator.netlify.app/)
 
-Ďalšie projekty: [GitHub](https://github.com/ladislav987?tab=stars)
+### Ďalšie projekty: [GitHub](https://github.com/ladislav987?tab=stars)
 
 ---
 
@@ -12,7 +12,7 @@ Live verzia [Tip calculator app](https://lctipscalculator.netlify.app/)
 
 ### **function checkInput()**
 
-- kontroluje či je vyplenený input
+- funkcia kontroluje či je vyplenený input
 
 ### **function formatUSD(numbers)**
 
@@ -20,7 +20,7 @@ Live verzia [Tip calculator app](https://lctipscalculator.netlify.app/)
 
 ### **function count(percent, amount, people)**
 
-- vypočíta výslednu sumu pre sprepitného na človeka a sumu na zaplatenie pre jedného
+- táto funkcia vypočíta dve výsledné hodnoty ktoré ma jednotlivec zaplatiť. Teda výšku sprepitného a výsledok po rovnomernom rozdelení účtu medzi všetky osoby.
 
 ### **function resetHandler()**
 
