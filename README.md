@@ -2,7 +2,7 @@
 
 ![Design preview](./images/tip-calculator-app-preview.jpg)
 
-### Live verzia [Tip calculator app](https://lc-tips-calculator.netlify.app/)
+### Live verzia [Tip calculator app](https://lc-tips-calculator-js.netlify.app/)
 
 ### Ďalšie projekty: [GitHub](https://github.com/ladislav987?tab=stars)
 
